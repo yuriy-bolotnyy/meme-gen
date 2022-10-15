@@ -1,11 +1,11 @@
 .navbar * {
     /* border: 1px dotted rgb(249, 249, 252); */
     box-sizing: border-box;
+    padding: 0.5rem;
 }
 
 header.navbar {
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
     height: 65px;
     /* max-height: 65px; THIS DOES FAIL! WHY? */

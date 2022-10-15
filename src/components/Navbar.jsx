@@ -5,13 +5,8 @@ import "./Navbar.css"
 const Navbar = () => {
     return (
             <header className="navbar">
-                {/* <div className="navbar--img-container"> */}
-                    <img src={trollFace} alt="troll face" />
-                {/* </div> */}
-                {/* <div> */}
-                    <h2>Meme Generator</h2>
-                {/* </div> */}
-                 
+                <img src={trollFace} alt="troll face" />
+                <h2>Meme Generator</h2>
             </header>
     )
 }
