@@ -3,30 +3,25 @@
     box-sizing: border-box;
 }
 
-.navbar {
+header.navbar {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
+    height: 65px;
+    /* max-height: 65px; THIS DOES FAIL! WHY? */
 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
 
-    max-height: 3rem;
     padding: 0.5rem;
 }
 
-.navbar--img-container {
+header.navbar img {
+    height: 100%;
     margin-left: 0.5rem;
-    width: 3rem;
-    display: flex;
-    align-items: center;
 }
 
-.navbar--img-container img {
-    width: 100%;
-}
-
-.navbar--text {
+header.navbar h2 {
     font-size: 20.75px;
     font-weight: 700;
     font-family:'Karla';

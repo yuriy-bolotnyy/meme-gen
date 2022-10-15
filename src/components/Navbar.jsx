@@ -4,15 +4,15 @@ import "./Navbar.css"
 
 const Navbar = () => {
     return (
-            <nav className="navbar">
-                <div className="navbar--img-container">
+            <header className="navbar">
+                {/* <div className="navbar--img-container"> */}
                     <img src={trollFace} alt="troll face" />
-                </div>
-                <div>
-                    <span className="navbar--text">Meme Generator</span>
-                </div>
+                {/* </div> */}
+                {/* <div> */}
+                    <h2>Meme Generator</h2>
+                {/* </div> */}
                  
-            </nav>
+            </header>
     )
 }
 
