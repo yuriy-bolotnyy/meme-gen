@@ -1,0 +1,44 @@
+.navbar * {
+    border: 1px dotted rgb(249, 249, 252);
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    /* background-color: white; */
+
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+
+    /* box-sizing: border-box;
+    width: 100%; */
+
+    max-height: 3rem;
+    /* margin: auto; */
+    padding: 0.5rem;
+}
+
+.navbar--img-container {
+    /* height: 80px; */
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    /* justify-items: center; */
+    /* justify-items: center; */
+}
+
+.navbar--img-container img {
+    /* max-height: 3rem; */
+    width: 100%;
+}
+
+.navbar--text {
+    font-size: 20.75px;
+    font-weight: 700;
+    font-family:'Karla';
+    color: white;
+    /* padding: 1rem; */
+}
