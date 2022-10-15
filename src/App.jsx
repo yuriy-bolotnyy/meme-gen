@@ -4,6 +4,7 @@ import './App.css'
 
 import Navbar from './components/Navbar'
 import Meme from './components/Meme'
+import MemeGrid from './components/MemeGrid'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
 
       <Navbar />
       <Meme />
+      <MemeGrid />
     </div>
   )
 }
