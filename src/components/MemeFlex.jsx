@@ -1,7 +1,7 @@
 import React from "react";
-import "./Meme.css"
+import "./MemeFlex.css"
 
-const Meme = () => {
+const MemeFlex = () => {
     return (
         <div className="inputForm">
             <div className="textInputContainer">
@@ -13,4 +13,4 @@ const Meme = () => {
     )
 }
 
-export default Meme
+export default MemeFlex

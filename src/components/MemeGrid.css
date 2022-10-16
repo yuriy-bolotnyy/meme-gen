@@ -1,14 +1,13 @@
-form.inputGrid {
+.inputGrid {
     border: 3px dotted rgb(90, 90, 245);
     padding: 5%;
     display: grid;
-    grid-template: 2.5rem 2.5rem / 1fr 1fr;
+    grid-template: 2.5rem 2.5rem 25rem / 1fr 1fr;
     gap: 1.5rem;
 }
 
-form.inputGrid>button {
+.inputGrid>button {
     grid-column: 1 / -1;
-
     color: white;
     background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
     border-radius: 5px;
@@ -20,5 +19,16 @@ form.inputGrid>button {
     width: 100%;
     height: 3rem;
     /* margin: 5% 0% 0%; */
+}
+
+.imgContainer {
+    border: 2px dotted rgb(21, 221, 85);
+    grid-column: 1 / -1;
+}
+
+.imgContainer>img {
+    height: 100%;
+    /* height: 20rem; */
+    /* border: 2px dotted rgb(21, 221, 85); */
 }
 

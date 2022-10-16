@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
             <header className="navbar">
                 <img src={trollFace} alt="troll face" />
-                <h2>Meme Generator</h2>
+                <h2>Meme Generator by Sophia :)</h2>
             </header>
     )
 }

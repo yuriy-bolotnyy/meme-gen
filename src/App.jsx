@@ -3,7 +3,7 @@ import reactLogo from '../public/assets/react.svg'
 import './App.css'
 
 import Navbar from './components/Navbar'
-import Meme from './components/Meme'
+import MemeFlex from './components/MemeFlex'
 import MemeGrid from './components/MemeGrid'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
 
       <Navbar />
-      <Meme />
+      {/* <MemeFlex /> */}
       <MemeGrid />
     </div>
   )
