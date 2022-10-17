@@ -7,28 +7,31 @@ const MemeGrid = () => {
     const [meme, setMeme] = React.useState({
         topText: "Top text", 
         bottomText: "Bottom text", 
-        imgUrl: "https://i.imgflip.com/tau4.jpg"})
+        imgUrl: "https://i.imgflip.com/tau4.jpg",
+        allMemeImages: memesData,
+        randomImg: () => {
+            const randomEl = Math.floor(Math.random()*allMemeImages.data.memes.length)
+            return memsData.data.memes[randomEl].url
+        } 
+    })
 
     console.log(`Top text: ${meme.topText} | Bottom text: ${meme.bottomText} | img:${meme.imgUrl}`)
 
     let randomIndex = Math.floor(Math.random()*memesData.data.memes.length)
     console.dir(memesData.data.memes[randomIndex].url)
 
-    const randomImg = () => {
-        const randomEl = Math.floor(Math.random()*memesData.data.memes.length)
-        return memesData.data.memes[randomEl].url
+    const randomImg = (memsData) => {
+        const randomEl = Math.floor(Math.random()*memsData.data.memes.length)
+        return memsData.data.memes[randomEl].url
     } 
 
     const cnahgeImg = () => {
         // document.querySelector(".imgContainer>img").src = randomImg()
         // setImgUrl(randomImg())
-        setMeme(prevMeme => ({...prevMeme, imgUrl:randomImg()}))
-
+        setMeme(prevMeme => ({...prevMeme, imgUrl:randomImg(meme.allMemeImages)}))
         console.log(`updated to ---> Top text: ${meme.topText} | Bottom text: ${meme.bottomText} | img:${meme.imgUrl}`)
 
     }
-
-    // const [imgUrl, setImgUrl] = React.useState('')
 
 
     return (
