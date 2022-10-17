@@ -4,6 +4,8 @@ import "./MemeGrid.css"
 import memesData from "../memesData";
 
 const MemeGrid = () => {
+    const [topText, bottomText, randomImage] = React.useState(["", "", "https://i.imgflip.com/tau4.jpg"])
+
     let randomIndex = Math.floor(Math.random()*memesData.data.memes.length)
     console.dir(memesData.data.memes[randomIndex].url)
 
@@ -13,8 +15,12 @@ const MemeGrid = () => {
     } 
 
     const cnahgeImg = () => {
-        document.querySelector(".imgContainer>img").src = randomImg()
+        // document.querySelector(".imgContainer>img").src = randomImg()
+        setImgUrl(randomImg())
     }
+
+    const [imgUrl, setImgUrl] = React.useState('')
+
 
     return (
         <div className="inputGrid">
@@ -25,6 +31,7 @@ const MemeGrid = () => {
             <div className="imgContainer">
                 {/* <img src="https://i.imgflip.com/emccr.jpg" alt="image" /> */}
                 <img src={randomImg()} alt="image" />
+                {/* <img src={imgUrl} alt="imageUrl" /> */}
             </div>
             
         </div>
