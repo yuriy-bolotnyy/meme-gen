@@ -21,15 +21,64 @@
     /* margin: 5% 0% 0%; */
 }
 
-.imgContainer {
+.meme {
     /* border: 2px dotted rgb(21, 221, 85); */
     grid-column: 1 / -1;
+    position: relative;
 }
 
-.imgContainer>img {
-    height: 100%;
+/* .meme>img {
+    width: 100%;
     /* height: 20rem; */
     /* border: 2px dotted rgb(21, 221, 85); */
+    /* box-shadow: 5px 5px 5px 1px rgba(120,120,120,0.44); */
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    }
+    
+
+.meme--image {
+    /* max-width: 100%; */
+    height: 97%;
+    border-radius: 3px;
     box-shadow: 5px 5px 5px 1px rgba(120,120,120,0.44);
+    vertical-align: middle;
+    /* margin-top: 1rem;  Why vertical centering doesn't work automatically ??? */
+}
+
+.meme--text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    /* margin: 15px 0; */
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.top {
+    top: 0;
 }
 

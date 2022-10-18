@@ -5,8 +5,8 @@ import memesData from "../memesData";
 
 const MemeGrid = () => {
     const [meme, setMeme] = React.useState({
-        topText: "Top text", 
-        bottomText: "Bottom text", 
+        topText: "", 
+        bottomText: "", 
         imgUrl: "https://i.imgflip.com/tau4.jpg",
         allMemeImages: memesData,
         randomImg: () => {
@@ -33,21 +33,32 @@ const MemeGrid = () => {
 
     }
 
+    const handleChange = (event) => {
+        setMeme(prevState => (
+            {
+                ...prevState,
+                [event.target.name]: event.target.value
+            }
+        ))
+    }
+    
 
     return (
-        <div className="inputGrid">
-            <input className="top" type="text" placeholder={meme.topText}/>
-            <input className="bottom" type="text" placeholder={meme.bottomText}/>
+        <main className="inputGrid">
+            <input className="top" name="topText" type="text" placeholder="Top text" onChange={handleChange}/>
+            <input className="bottom" name="bottomText" type="text" placeholder="Bottom text" onChange={handleChange}/>
             <button onClick={cnahgeImg}>Get a new meme image</button>
 
-            <div className="imgContainer">
+            <div className="meme">
                 {/* <img src="https://i.imgflip.com/emccr.jpg" alt="image" /> */}
                 {/* <img src={randomImg()} alt="image" /> */}
-                <img src={meme.imgUrl} alt="image" />
+                <span class="helper"></span><img src={meme.imgUrl} alt="image" className="meme--image"/>
                 {/* <img src={imgUrl} alt="imageUrl" /> */}
+                <h2 className="meme--text top">{meme.topText}</h2>
+                <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
             
-        </div>
+        </main>
     )
 }
 
