@@ -1,14 +1,14 @@
 import React from "react";
 import "./MemeGrid.css"
 // import "../memesData"
-import memesData from "../memesData";
+// import memesData from "../memesData";
 
 const MemeGrid = () => {
     const [meme, setMeme] = React.useState({
         topText: "", 
         bottomText: "", 
         imgUrl: "https://i.imgflip.com/tau4.jpg",
-        allMemeImages: memesData,
+        allMemeImages: {}, // memesData,
         randomImg: () => {
             const randomEl = Math.floor(Math.random()*allMemeImages.data.memes.length)
             return memsData.data.memes[randomEl].url
@@ -17,8 +17,8 @@ const MemeGrid = () => {
 
     console.log(`Top text: ${meme.topText} | Bottom text: ${meme.bottomText} | img:${meme.imgUrl}`)
 
-    let randomIndex = Math.floor(Math.random()*memesData.data.memes.length)
-    console.dir(memesData.data.memes[randomIndex].url)
+    // let randomIndex = Math.floor(Math.random()*memesData.data.memes.length)
+    // console.dir(memesData.data.memes[randomIndex].url)
 
     const randomImg = (memsData) => {
         const randomEl = Math.floor(Math.random()*memsData.data.memes.length)
@@ -41,7 +41,19 @@ const MemeGrid = () => {
             }
         ))
     }
-    
+
+    React.useEffect(() => {
+        console.log("fetch called")
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            // .then(data => console.log(`fetched ${data.data.memes.length} memes`))
+            .then(data => setMeme(prevState => (
+                {
+                    ...prevState,
+                    allMemeImages: data
+                }
+            )))
+    }, [])    
 
     return (
         <main className="inputGrid">
