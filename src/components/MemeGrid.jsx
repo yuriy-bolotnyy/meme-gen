@@ -52,7 +52,7 @@ const MemeGrid = () => {
             <div className="meme">
                 {/* <img src="https://i.imgflip.com/emccr.jpg" alt="image" /> */}
                 {/* <img src={randomImg()} alt="image" /> */}
-                <span class="helper"></span><img src={meme.imgUrl} alt="image" className="meme--image"/>
+                <span className="helper"></span><img src={meme.imgUrl} alt="image" className="meme--image"/>
                 {/* <img src={imgUrl} alt="imageUrl" /> */}
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
